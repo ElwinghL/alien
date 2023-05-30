@@ -31,11 +31,7 @@ module.exports = {
       ephemeral: secret,
     });
     await interaction.followUp({
-      content: `${dice} + ${stress} = ${dice + stress}`,
-      ephemeral: secret,
-    });
-    await interaction.followUp({
-      content: `${
+      content: `${dice} + ${stress} = ${dice + stress} : ${
         Panic.find(
           ({ range: [start, end] }) =>
             dice + stress <= end && dice + stress >= start
