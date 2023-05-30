@@ -11,13 +11,17 @@ module.exports = {
         .setName("dices")
         .setDescription("The number of D6 to roll")
         .setRequired(true)
-    )
-    .addIntegerOption((option) =>
-      option
-        .setName("stress")
-        .setDescription("The current level of stress of the character")
-        .setRequired(true)
         .setMinValue(0)
+        .setMaxValue(30)
+    )
+    .addIntegerOption(
+      (option) =>
+        option
+          .setName("stress")
+          .setDescription("The current level of stress of the character")
+          .setRequired(true)
+          .setMinValue(0)
+          .setMaxValue(30) // arbitrary number from the panic.json range
     ),
   async execute(interaction) {
     const emojiList = await interaction.guild.emojis.fetch();

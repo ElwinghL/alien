@@ -8,5 +8,5 @@
   { "range": [12, 12], "effect": "Hurlement" },
   { "range": [13, 13], "effect": "Fuite" },
   { "range": [14, 14], "effect": "Psychose" },
-  { "range": [15, 999], "effect": "Catatonie " }
+  { "range": [15, 36], "effect": "Catatonie " }
 ]
