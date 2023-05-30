@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
+const Panic = require("../res/panic.json");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -37,8 +38,14 @@ module.exports = {
       .map((v) => emojiList.find((e) => e.name == `d${v}s`))
       .join("")}\n`;
     const fails = stressDices.filter((r) => r == 1).length;
-    if (fails >= 1) message += `Oh non... Tu paniques !`;
-    else
+    if (fails >= 1) {
+      const panicRoll = Math.floor(Math.random() * 6 + 1);
+      message += `Tu paniques ! ${emojiList.find(
+        (e) => e.name == `d${panicRoll}`
+      )} + ${stress} de stress\n${panicRoll + stress} : ${
+        Panic[`${panicRoll + stress}`] || Panic["15"]
+      }`;
+    } else
       message += `Tu as ${
         [...normalDices, ...stressDices].filter((r) => r == 6).length
       } réussites !`;
