@@ -32,24 +32,28 @@ module.exports = {
       return Math.floor(Math.random() * 6 + 1);
     });
 
-    let message = `${normalDices
-      .map((v) => emojiList.find((e) => e.name == `d${v}`))
-      .join("")}\n${stressDices
-      .map((v) => emojiList.find((e) => e.name == `d${v}s`))
-      .join("")}\n`;
+    await interaction.reply(
+      `${normalDices
+        .map((v) => emojiList.find((e) => e.name == `d${v}`))
+        .join("")}\n${stressDices
+        .map((v) => emojiList.find((e) => e.name == `d${v}s`))
+        .join("")}`
+    );
     const fails = stressDices.filter((r) => r == 1).length;
     if (fails >= 1) {
       const panicRoll = Math.floor(Math.random() * 6 + 1);
-      message += `Tu paniques ! ${emojiList.find(
-        (e) => e.name == `d${panicRoll}`
-      )} + ${stress} de stress\n${panicRoll + stress} : ${
-        Panic[`${panicRoll + stress}`] || Panic["15"]
-      }`;
-    } else
-      message += `Tu as ${
+      await interaction.followUp(
+        `Tu paniques ! ${emojiList.find(
+          (e) => e.name == `d${panicRoll}`
+        )} + ${stress} de stress\n${panicRoll + stress} : ${
+          Panic[`${panicRoll + stress}`] || Panic["15"]
+        }`
+      );
+    }
+    await interaction.followUp(
+      `Tu as ${
         [...normalDices, ...stressDices].filter((r) => r == 6).length
-      } réussites !`;
-
-    await interaction.reply(message);
+      } réussites !`
+    );
   },
 };
