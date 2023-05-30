@@ -19,6 +19,8 @@ module.exports = {
         .setMinValue(0)
     ),
   async execute(interaction) {
+    const emojiList = await interaction.guild.emojis.fetch();
+
     const dices = interaction.options.getInteger("dices");
     const stress = interaction.options.getInteger("stress");
 
@@ -29,9 +31,17 @@ module.exports = {
       return Math.floor(Math.random() * 6 + 1);
     });
 
-    const message = `Tu as roll : ${normalDices
-      .map((v) => `:d${v}:`)
-      .join("")} et ${stressDices.map((v) => `:d${v}s:`).join("")} `;
+    let message = `${normalDices
+      .map((v) => emojiList.find((e) => e.name == `d${v}`))
+      .join("")}\n${stressDices
+      .map((v) => emojiList.find((e) => e.name == `d${v}s`))
+      .join("")}\n`;
+    const fails = stressDices.filter((r) => r == 1).length;
+    if (fails >= 1) message += `Oh non... Tu paniques !`;
+    else
+      message += `Tu as ${
+        [...normalDices, ...stressDices].filter((r) => r == 6).length
+      } réussites !`;
 
     await interaction.reply(message);
   },
