@@ -11,7 +11,13 @@ const {
 } = require("discord.js");
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildEmojisAndStickers,
+  ],
+});
 
 // Commands Handler
 client.commands = new Collection();
