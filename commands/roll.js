@@ -39,21 +39,24 @@ module.exports = {
         .map((v) => emojiList.find((e) => e.name == `d${v}s`))
         .join("")}`
     );
+    await interaction.followUp(
+      `Tu as **${
+        [...normalDices, ...stressDices].filter((r) => r == 6).length
+      }** réussites !`
+    );
     const fails = stressDices.filter((r) => r == 1).length;
     if (fails >= 1) {
       const panicRoll = Math.floor(Math.random() * 6 + 1);
       await interaction.followUp(
-        `Tu paniques ! ${emojiList.find(
+        `Tu paniques avec ${emojiList.find(
           (e) => e.name == `d${panicRoll}`
         )} + ${stress} de stress\n${panicRoll + stress} : ${
-          Panic[`${panicRoll + stress}`] || Panic["15"]
+          Panic.find(
+            ({ range: [start, end] }) =>
+              panicRoll + stress <= end && panicRoll + stress >= start
+          ).effect
         }`
       );
     }
-    await interaction.followUp(
-      `Tu as ${
-        [...normalDices, ...stressDices].filter((r) => r == 6).length
-      } réussites !`
-    );
   },
 };

@@ -1,17 +1,12 @@
-{
-  "1": "Rien",
-  "2": "Rien",
-  "3": "Rien",
-  "4": "Rien",
-  "5": "Rien",
-  "6": "Rien",
-  "7": "Tressaillement nerveux",
-  "8": "Tremblement",
-  "9": "Objet lâché",
-  "10": "Figé",
-  "11": "Tous aux abris !",
-  "12": "Hurlement",
-  "13": "Fuite",
-  "14": "Psychose",
-  "15": "Catatonie"
-}
+[
+  { "range": [0, 6], "effect": "Rien" },
+  { "range": [7, 7], "effect": "Tressaillement nerveux" },
+  { "range": [8, 8], "effect": "Tremblement" },
+  { "range": [9, 9], "effect": "Objet lâché" },
+  { "range": [10, 10], "effect": "Figé" },
+  { "range": [11, 11], "effect": "Tous aux abris !" },
+  { "range": [12, 12], "effect": "Hurlement" },
+  { "range": [13, 13], "effect": "Fuite" },
+  { "range": [14, 14], "effect": "Psychose" },
+  { "range": [15, 999], "effect": "Catatonie " }
+]
