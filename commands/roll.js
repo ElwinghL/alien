@@ -1,10 +1,8 @@
 const { SlashCommandBuilder } = require("discord.js");
-const Panic = require("../res/panic.json");
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("roll")
-    .setNameLocalizations({ fr: "roll" })
     .setDescription("Rolls the dices")
     .addIntegerOption((option) =>
       option
@@ -59,16 +57,8 @@ module.exports = {
     });
     const fails = stressDices.filter((r) => r == 1).length;
     if (fails >= 1) {
-      const panicRoll = Math.floor(Math.random() * 6 + 1);
       await interaction.followUp({
-        content: `Tu paniques avec ${emojiList.find(
-          (e) => e.name == `d${panicRoll}`
-        )} + ${stress} de stress\n${panicRoll + stress} : ${
-          Panic.find(
-            ({ range: [start, end] }) =>
-              panicRoll + stress <= end && panicRoll + stress >= start
-          ).effect
-        }`,
+        content: `Oh non...`,
         ephemeral: secret,
       });
     }
