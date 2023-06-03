@@ -1,11 +1,11 @@
 {
-  "bloodburster": [
+  "Bloodburster": [
     { "range": [1, 3], "effect": "Evasion" },
     { "range": [4, 4], "effect": "Horrible sifflement" },
     { "range": [5, 5], "effect": "Morsure à la jambe" },
     { "range": [6, 6], "effect": "Morsure à la gorge" }
   ],
-  "néomorphe": [
+  "Néomorphe": [
     { "range": [1, 1], "effect": "Horrible sifflement" },
     { "range": [2, 2], "effect": "Coup de queue" },
     { "range": [3, 3], "effect": "Etreinte fatale" },
@@ -13,20 +13,20 @@
     { "range": [5, 5], "effect": "Morsure à la gorge" },
     { "range": [6, 6], "effect": "Empalement caudale" }
   ],
-  "faceHugger": [
+  "FaceHugger": [
     { "range": [1, 2], "effect": "Course arachnoïde" },
     { "range": [3, 3], "effect": "Coup de queue" },
     { "range": [4, 4], "effect": "Saisie caudale" },
     { "range": [5, 5], "effect": "Saisie faciale" },
     { "range": [6, 6], "effect": "Baiser de mort" }
   ],
-  "chestbuster": [
+  "Chestbuster": [
     { "range": [1, 3], "effect": "Evasion" },
     { "range": [4, 4], "effect": "Horrible sifflement" },
     { "range": [5, 5], "effect": "Morsure à la jambe" },
     { "range": [6, 6], "effect": "Morsure à la gorge" }
   ],
-  "rôdeur": [
+  "Rôdeur": [
     { "range": [1, 1], "effect": "Regard hypnotique" },
     { "range": [2, 2], "effect": "Jouer avec la proie" },
     { "range": [3, 3], "effect": "Enlèvement" },
@@ -34,7 +34,7 @@
     { "range": [5, 5], "effect": "Un prisonnier pour la ruche" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "éclaireur": [
+  "Eclaireur": [
     { "range": [1, 1], "effect": "Regard hypnotique" },
     { "range": [2, 2], "effect": "Jouer avec la proie" },
     { "range": [3, 3], "effect": "Enlèvement" },
@@ -42,7 +42,7 @@
     { "range": [5, 5], "effect": "Un prisonnier pour la ruche" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "drône": [
+  "Drône": [
     { "range": [1, 1], "effect": "Regard hypnotique" },
     { "range": [2, 2], "effect": "Jouer avec la proie" },
     { "range": [3, 3], "effect": "Enlèvement" },
@@ -50,7 +50,7 @@
     { "range": [5, 5], "effect": "Un prisonnier pour la ruche" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "soldat": [
+  "Soldat": [
     { "range": [1, 1], "effect": "Estimation du danger" },
     { "range": [2, 2], "effect": "Un pour tous" },
     { "range": [3, 3], "effect": "Attaque sans pitié" },
@@ -58,7 +58,7 @@
     { "range": [5, 5], "effect": "Mourir pour la reine" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "sentinelle": [
+  "Sentinelle": [
     { "range": [1, 1], "effect": "Estimation du danger" },
     { "range": [2, 2], "effect": "Un pour tous" },
     { "range": [3, 3], "effect": "Attaque sans pitié" },
@@ -66,7 +66,7 @@
     { "range": [5, 5], "effect": "Mourir pour la reine" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "prétorien": [
+  "Prétorien": [
     { "range": [1, 1], "effect": "Appel à la garde" },
     { "range": [2, 2], "effect": "Charge" },
     { "range": [3, 3], "effect": "Morsure bestiale" },
@@ -74,7 +74,7 @@
     { "range": [5, 5], "effect": "Empalement caudale" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "broyeur": [
+  "Broyeur": [
     { "range": [1, 1], "effect": "Appel à la garde" },
     { "range": [2, 2], "effect": "Charge" },
     { "range": [3, 3], "effect": "Morsure bestiale" },
@@ -82,7 +82,7 @@
     { "range": [5, 5], "effect": "Empalement caudale" },
     { "range": [6, 6], "effect": "Morsure à la tête" }
   ],
-  "reine": [
+  "Reine": [
     { "range": [1, 1], "effect": "Appel à la garde" },
     { "range": [2, 2], "effect": "Charge" },
     { "range": [3, 3], "effect": "Morsure bestiale" },
