@@ -1,0 +1,50 @@
+{
+  "1": {
+    "1": "Essouflé",
+    "2": "Etourdi",
+    "3": "Douleur atroce",
+    "4": "Cheville foulée",
+    "5": "Sang dans les yeux",
+    "6": "Commotion cérébrale"
+  },
+  "2": {
+    "1": "Oreille coupée",
+    "2": "Orteils cassés",
+    "3": "Main cassée",
+    "4": "Dents cassées",
+    "5": "Cuisse transpercée",
+    "6": "Entaille à l'épaule"
+  },
+  "3": {
+    "1": "Nez cassé",
+    "2": "Coup à l'entrejambe",
+    "3": "Côtes cassées",
+    "4": "Oeil crevé",
+    "5": "Genou cassé",
+    "6": "Bras cassé"
+  },
+  "4": {
+    "1": "Jambe cassée",
+    "2": "Pied écrasé",
+    "3": "Coude fracassé",
+    "4": "Poumon perforé",
+    "5": "Hémoragie interne",
+    "6": "Intestins percés"
+  },
+  "5": {
+    "1": "Rein écrasé",
+    "2": "Artère du bras ouverte",
+    "3": "Artère de la jambe ouverte",
+    "4": "Bras sectionné",
+    "5": "Jambe sectionnée",
+    "6": "Colonne vetébrale fracturée"
+  },
+  "6": {
+    "1": "Jugulaire ouverte",
+    "2": "Aorte ouverte",
+    "3": "Eventré",
+    "4": "Crâne écrasé",
+    "5": "Coeur perforé",
+    "6": "Coeur empalé"
+  }
+}
