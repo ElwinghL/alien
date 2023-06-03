@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { SlashCommandBuilder } = require("discord.js");
 const Panic = require("../res/panic.json");
 
@@ -12,23 +13,16 @@ module.exports = {
         .setRequired(true)
         .setMinValue(0)
         .setMaxValue(30)
-    )
-    .addBooleanOption((option) =>
-      option
-        .setName("secret")
-        .setDescription("Do you want this message to be private ?")
-        .setRequired(false)
     ),
 
   async execute(interaction) {
     const emojiList = await interaction.guild.emojis.fetch();
     const stress = interaction.options.getInteger("stress");
-    const secret = interaction.options.getBoolean("secret") || false;
     const dice = Math.floor(Math.random() * 6 + 1);
 
     await interaction.reply({
       content: `${emojiList.find((e) => e.name == `d${dice}`)}`,
-      ephemeral: secret,
+      ephemeral: true,
     });
     await interaction.followUp({
       content: `${dice} + ${stress} = ${dice + stress} : ${
@@ -37,7 +31,23 @@ module.exports = {
             dice + stress <= end && dice + stress >= start
         ).effect
       }`,
-      ephemeral: secret,
+      ephemeral: true,
     });
+
+    //Then we send messages on admin channel
+    await interaction.guild.channels
+      .fetch(process.env.privateChan)
+      .then((channel) => {
+        channel.send(
+          `${interaction.member.displayName} rolled ${emojiList.find(
+            (e) => e.name == `d${dice}`
+          )} + ${stress} : ${
+            Panic.find(
+              ({ range: [start, end] }) =>
+                dice + stress <= end && dice + stress >= start
+            ).effect
+          }`
+        );
+      });
   },
 };
